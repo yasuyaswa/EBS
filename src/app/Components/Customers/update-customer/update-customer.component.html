@@ -1,5 +1,5 @@
 <div class="container" my-5>
-  <h1>Update</h1>
+  <h1>Edit Customer</h1>
   <div class="row">
     <div class="col-6">
       <form #form="ngForm" (ngSubmit)="UpdateCustomer()">
@@ -64,7 +64,7 @@
             [(ngModel)]="CustomerDetails.customerAddress"
           />
         </div>
-        <button type="button" class="btn btn-danger mr-2" title="Back">
+        <button type="button" class="btn btn-danger mr-2" title="Back" [routerLink]="'/Customer'">
           <i class="fa fa-arrow-left"></i>
         </button>
         <button type="submit" class="btn btn-primary mr-2">Submit</button>

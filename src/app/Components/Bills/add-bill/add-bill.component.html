@@ -1,1 +1,55 @@
-<p>add-bill works!</p>
+<div class="container" my-5>
+  <h1>Add New Bill</h1>
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="AddBill()">
+        <div class="mb-3">
+          <label for="customerId" class="form-label">Customer Id</label>
+          <input
+            type="number"
+            class="form-control"
+            id="customerId"
+            name="customerId"
+            [(ngModel)]="AddBillRequest.customerId"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="perUnitCost" class="form-label">Per Unit Cost</label>
+          <input
+            type="number"
+            class="form-control"
+            id="perUnitCost"
+            name="perUnitCost"
+            [(ngModel)]="AddBillRequest.perUnitCost"
+            (input)="calculateBillAmount()"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="totalUnits" class="form-label">Total Units</label>
+          <input
+            type="number"
+            class="form-control"
+            id="totalUnits"
+            name="totalUnits"
+            [(ngModel)]="AddBillRequest.totalUnits"
+            (input)="calculateBillAmount()"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="billAmount" class="form-label">Bill Amount</label>
+          <input
+            type="number"
+            class="form-control"
+            id="billAmount"
+            name="billAmount"
+            [(ngModel)]="AddBillRequest.billAmount"
+            
+          />
+        </div>
+        <button type="save" class="btn btn-primary">
+          <i class="fa fa-plus"></i> Create
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

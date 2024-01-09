@@ -4,6 +4,7 @@ body {
 
 footer {
     /* position: fixed; */
+    margin-top: 200px;
     bottom: 0;
     width: 100%;
     background-color: #343a40; /* Replace with your desired background color */

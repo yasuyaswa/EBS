@@ -14,6 +14,8 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { AddBillComponent } from './Components/Bills/add-bill/add-bill.component';
 import { BillListComponent } from './Components/Bills/bill-list/bill-list.component';
+import { UpdateBillComponent } from './Components/Bills/update-bill/update-bill.component';
+import { CustomerLoginComponent } from './Components/Customers/customer-login/customer-login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { BillListComponent } from './Components/Bills/bill-list/bill-list.compon
     FooterComponent,
     ContactUsComponent,
     AddBillComponent,
-    BillListComponent
+    BillListComponent,
+    UpdateBillComponent,
+    CustomerLoginComponent
   ],
   imports: [
     BrowserModule,

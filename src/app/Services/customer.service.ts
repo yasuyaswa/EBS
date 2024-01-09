@@ -15,18 +15,22 @@ export class CustomersService {
   }
 
   AddCustomer(AddCustomerRequest: Customer): Observable<Customer>{
-    return this.http.post<Customer>(this.BaseUrl + 'api/Customer', AddCustomerRequest);
+    return this.http.post<Customer>(this.BaseUrl + 'api/Customers', AddCustomerRequest);
   }
 
   GetCustomer(id: number): Observable<Customer>{
-    return this.http.get<Customer>(this.BaseUrl+ 'api/Customer/' +id);
+    return this.http.get<Customer>(this.BaseUrl+ 'api/Customers/' +id);
   }
 
   UpdateCustomer(id: number, UpdateCustomerRequest: Customer): Observable<Customer>{
-    return this.http.put<Customer>(this.BaseUrl+'api/Customer/'+id, UpdateCustomerRequest);
+    return this.http.put<Customer>(this.BaseUrl+'api/Customers/'+id, UpdateCustomerRequest);
   }
 
   DeleteCustomer(id: number): Observable<Customer>{
-    return this.http.delete<Customer>(this.BaseUrl+ 'api/Customer/'+id);
+    return this.http.delete<Customer>(this.BaseUrl+ 'api/Customers/'+id);
+  }
+
+  LoginCustomer(LoginCustomerRequest: Customer): Observable<Customer>{
+    return this.http.post<Customer>(this.BaseUrl+ 'api/Customers/Login', LoginCustomerRequest);
   }
 }

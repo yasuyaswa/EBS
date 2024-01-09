@@ -15,7 +15,7 @@ export class AddCustomerComponent implements OnInit {
     customerEmail: '',
     customerMobile: 0,
     customerPassword: '',
-    customerAddress: '',
+    customerAddress: ''
   };
 
   constructor(private customerService: CustomersService, private router: Router) {}
