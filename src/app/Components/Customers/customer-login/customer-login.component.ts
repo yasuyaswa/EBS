@@ -22,20 +22,18 @@ export class CustomerLoginComponent implements OnInit {
 
   ngOnInit(): void {};
 
-  LoginCustomer() {
+  LoginCustomer(){
     this.customerService.LoginCustomer(this.LoginCustomerRequest).subscribe({
       next: (response) => {
-        // Handle successful login response
         console.log('Login successful', response);
-        alert('Login successful');
-        // Optionally, you can navigate to a different page after successful login
+        alert('Login Successful');
+        this.customerService.CustomerEmail = this.LoginCustomerRequest.customerEmail;
         this.router.navigate(['/Customer']);
+
       },
       error: (error) => {
-        // Handle login error
         console.error('Login failed', error);
         alert('Invalid Credentials');
-        // Optionally, you can display an error message to the user
       }
     });
   }

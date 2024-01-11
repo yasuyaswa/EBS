@@ -1,0 +1,68 @@
+<div class="container my-5">
+    <h1>Edit Payment</h1>
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="UpdatePayment()">
+            <div class="mb-3">
+                <label for="paymentId" class="form-label">Payment Id</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="paymentId"
+                  name="paymentId"
+                  readonly
+                  [(ngModel)]="PaymentDetails.paymentId"
+                />
+              </div>
+            <div class="mb-3">
+            <label for="customerId" class="form-label">Customer Id</label>
+            <input
+              type="number"
+              class="form-control"
+              id="customerId"
+              name="customerId"
+              [(ngModel)]="PaymentDetails.customerId"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="billId" class="form-label">Bill Id</label>
+            <input
+              type="number"
+              class="form-control"
+              id="billId"
+              name="billId"
+              [(ngModel)]="PaymentDetails.billId"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="paymentStatus" class="form-label">Payment Status</label>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="paymentStatus">Options</label>
+              <select
+                class="form-select"
+                id="paymentStatus"
+                name="paymentStatus"
+                [(ngModel)]="PaymentDetails.paymentStatus"
+                required
+              >
+                <option value="paid">Paid</option>
+                <option value="unpaid">Unpaid</option>
+              </select>
+            </div>
+          </div>
+          <button type="button" class="btn btn-danger mr-2" title="Back" [routerLink]="'/Payment'">
+            <i class="fa fa-arrow-left"></i>
+          </button>
+          <button type="submit" class="btn btn-primary mr-2">Submit</button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="DeletePayment(PaymentDetails.paymentId)"
+          >
+            <i class="fa fa-trash"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

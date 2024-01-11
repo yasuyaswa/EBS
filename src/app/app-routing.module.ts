@@ -10,6 +10,10 @@ import { BillListComponent } from './Components/Bills/bill-list/bill-list.compon
 import { AddBillComponent } from './Components/Bills/add-bill/add-bill.component';
 import { UpdateBillComponent } from './Components/Bills/update-bill/update-bill.component';
 import { CustomerLoginComponent } from './Components/Customers/customer-login/customer-login.component';
+import { PaymentListComponent } from './Components/Payments/payment-list/payment-list.component';
+import { AddPaymentComponent } from './Components/Payments/add-payment/add-payment.component';
+import { UpdatePaymentComponent } from './Components/Payments/update-payment/update-payment.component';
+import { AdminLoginComponent } from './Components/admin-login/admin-login.component';
 
 const routes: Routes = [
   //{path: '', component: AppComponent},
@@ -23,7 +27,13 @@ const routes: Routes = [
 
   {path: 'Bill', component: BillListComponent},
   {path: 'Bill/Add', component: AddBillComponent},
-  {path: 'Bill/Update/:id', component: UpdateBillComponent}
+  {path: 'Bill/Update/:id', component: UpdateBillComponent},
+
+  {path: 'Payment', component: PaymentListComponent},
+  {path: 'Payment/Add', component: AddPaymentComponent},
+  {path: 'Payment/Update/:id', component: UpdatePaymentComponent},
+
+  {path: 'Admin/Login', component: AdminLoginComponent},
 ];
 
 @NgModule({

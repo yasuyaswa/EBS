@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class CustomersService {
 
+  CustomerEmail : any;
+
   constructor(private http: HttpClient) { }
   BaseUrl: string = 'http://localhost:5119/';
   GetAllCustomers(): Observable<Customer[]> {

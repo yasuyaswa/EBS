@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Bill } from 'src/app/Models/bill.models';
 import { BillsService } from 'src/app/Services/bill.service';
+import { CustomersService } from 'src/app/Services/customer.service';
 
 @Component({
   selector: 'app-bill-list',
@@ -11,12 +12,12 @@ import { BillsService } from 'src/app/Services/bill.service';
 export class BillListComponent implements OnInit{
   bills: Bill[] = [];
 
-  constructor(private billService: BillsService, private router: Router) {}
+  constructor(private billService: BillsService,private customerService: CustomersService, private router: Router) {}
 
   ngOnInit(): void {
     this.billService.GetAllBills().subscribe({
       next: (bills) => {
-        // console.log(customers);
+         console.log(this.customerService.CustomerEmail);
         this.bills = bills;
       },
       error: (error) => {

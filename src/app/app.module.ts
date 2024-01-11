@@ -16,7 +16,10 @@ import { AddBillComponent } from './Components/Bills/add-bill/add-bill.component
 import { BillListComponent } from './Components/Bills/bill-list/bill-list.component';
 import { UpdateBillComponent } from './Components/Bills/update-bill/update-bill.component';
 import { CustomerLoginComponent } from './Components/Customers/customer-login/customer-login.component';
-import { PaymentListComponent } from './Components/payment-list/payment-list.component';
+import { PaymentListComponent } from './Components/Payments/payment-list/payment-list.component';
+import { AddPaymentComponent } from './Components/Payments/add-payment/add-payment.component';
+import { UpdatePaymentComponent } from './Components/Payments/update-payment/update-payment.component';
+import { AdminLoginComponent } from './Components/admin-login/admin-login.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { PaymentListComponent } from './Components/payment-list/payment-list.com
     BillListComponent,
     UpdateBillComponent,
     CustomerLoginComponent,
-    PaymentListComponent
+    PaymentListComponent,
+    AddPaymentComponent,
+    UpdatePaymentComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
